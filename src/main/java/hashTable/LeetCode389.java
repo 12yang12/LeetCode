@@ -3,7 +3,13 @@ package hashTable;
 public class LeetCode389 {
 
     public char findTheDifference(String s, String t) {
-        char c = 0;
-        return c;
+        int sum = 0;
+        for (int i = 0; i < t.length(); ++i) {
+            if (i < s.length()) {
+                sum -= s.charAt(i);
+            }
+            sum += t.charAt(i);
+        }
+        return (char) sum;
     }
 }
