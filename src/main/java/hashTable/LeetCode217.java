@@ -2,7 +2,7 @@ package hashTable;
 
 import java.util.*;
 
-public class LeetCode17 {
+public class LeetCode217 {
 
     public boolean containsDuplicate(int[] nums) {
         // 排序法
