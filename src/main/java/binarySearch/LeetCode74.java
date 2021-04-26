@@ -3,16 +3,21 @@ package binarySearch;
 public class LeetCode74 {
 
     public boolean searchMatrix(int[][] matrix, int target) {
-        int i = 0;
-        int j = matrix[0].length - 1;
-        while (i <= matrix.length - 1 && j >= 0) {
-            if (matrix[i][j] == target) {
+        int row = matrix.length;
+        int column = matrix[0].length;
+        int left = 0;
+        int right = row * column - 1;
+        int mid = left + (right - left) / 2;
+
+        while (left <= right) {
+            if (matrix[mid / column][mid % column] == target) {
                 return true;
-            } else if (matrix[i][j] > target) {
-                j--;
+            } else if (matrix[mid / column][mid % column] > target) {
+                right = mid - 1;
             } else {
-                i++;
+                left = mid + 1;
             }
+            mid = left + (right - left) / 2;
         }
         return false;
     }
