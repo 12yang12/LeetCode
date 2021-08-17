@@ -1,7 +1,18 @@
 import java.util.LinkedHashMap;
 
-public class LeetCode146 {
-
+public class LC146 {
+    public static void main(String[] args) {
+        LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
+        cache.put(1, 1);
+        cache.put(2, 2);
+        cache.put(3, 3);
+        cache.put(4, 4);
+        System.out.println(cache);
+        cache.remove(1);
+        System.out.println(cache);
+        cache.put(5, 5);
+        System.out.println(cache);
+    }
 }
 
 class LRUCache {
