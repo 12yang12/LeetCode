@@ -2,7 +2,6 @@ package stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
 
 public class StackTest {
 
@@ -27,6 +26,8 @@ public class StackTest {
         // removeLast() stack为空时会抛异常NoSuchElementException
         int top1 = stack.removeLast();
         // pollLast() stack为空时返回null
+        System.out.println(stack);
+
         int top2 = stack.pollLast();
 
         // stack length

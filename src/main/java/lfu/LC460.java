@@ -1,6 +1,6 @@
 package lfu;
 
-import java.util.HashMap;·
+import java.util.HashMap;
 import java.util.LinkedHashSet;
 
 public class LC460 {
