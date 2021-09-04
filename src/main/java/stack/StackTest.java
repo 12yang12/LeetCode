@@ -1,47 +1,32 @@
 package stack;
 
-import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 
 public class StackTest {
 
     public static void main(String[] args) {
-        // create a stack
-        Deque<Integer> stack = new ArrayDeque<>();
-        // add element
-        // time complexity: O(1)
+        // 创建栈
+        // Deque<Integer> stack = new ArrayDeque<>();
+        Deque<Integer> stack = new LinkedList<>();
+
+        // 压栈 ,尾插
         stack.add(1);
         stack.add(2);
-        stack.add(3);
-        // stack = [1, 2, 3]
+        stack.addLast(3);
         System.out.println(stack);
 
-        // get the top of stack
-        // time complexity: O(1)
-        int top = stack.peekLast();
-        // top=3
+        // 获取栈顶元素
+        System.out.println(stack.peekLast());
 
-        // remove the top of stack
-        // time complexity: O(1)
-        // removeLast() stack为空时会抛异常NoSuchElementException
-        int top1 = stack.removeLast();
-        // pollLast() stack为空时返回null
-        System.out.println(stack);
-
-        int top2 = stack.pollLast();
+        // 出栈
+        while (!stack.isEmpty()) {
+            // stack.pollLast();
+            stack.removeLast();
+            System.out.println(stack);
+        }
 
         // stack length
         int length = stack.size();
-
-        // stack is empty?
-        boolean isEmpty = stack.isEmpty();
-
-        // Iterate a stack
-        // time complexity: O(N)
-        while (!stack.isEmpty()) {
-            int element = stack.removeLast();
-            System.out.println(element);
-        }
-
     }
 }
