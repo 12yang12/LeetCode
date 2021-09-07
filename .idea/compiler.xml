@@ -9,7 +9,7 @@
         <module name="LeetCode" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="14">
       <module name="LeetCode" target="14" />
     </bytecodeTargetLevel>
   </component>
