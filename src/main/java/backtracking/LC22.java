@@ -3,7 +3,7 @@ package backtracking;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeetCode22 {
+public class LC22 {
 
 
     public List<String> generateParenthesis(int n) {
