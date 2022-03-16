@@ -17,12 +17,12 @@ public class LC107 {
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            List<Integer> levelList  = new ArrayList<>();
+            List<Integer> levelList = new ArrayList<>();
             int levelQueueSize = queue.size();
 
             while (levelQueueSize > 0) {
                 TreeNode node = queue.poll();
-                levelList .add(node.val);
+                levelList.add(node.val);
 
                 if (node.left != null) {
                     queue.add(node.left);
@@ -33,7 +33,7 @@ public class LC107 {
                 levelQueueSize--;
             }
 
-            resultList.add(levelList );
+            resultList.add(levelList);
         }
 
         Collections.reverse(resultList);

@@ -38,6 +38,7 @@ public class LC145 {
         while (!stack.isEmpty()) {
             TreeNode node = stack.removeLast();
             result.add(node.val);
+
             if (node.left != null) {
                 stack.addLast(node.left);
             }
