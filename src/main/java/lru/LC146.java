@@ -1,5 +1,6 @@
 package lru;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 
 public class LC146 {
@@ -10,6 +11,9 @@ public class LC146 {
         cache.put(3, 3);
         cache.put(4, 4);
         System.out.println(cache);
+        Iterator<Integer> iterator = cache.keySet().iterator();
+        System.out.println(iterator.next());
+
         cache.remove(1);
         System.out.println(cache);
         cache.put(5, 5);
