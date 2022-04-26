@@ -16,13 +16,13 @@ public class LC92 {
         ListNode pre = dummyNode;
         // 第 1 步：从虚拟头节点走 left - 1 步，来到 left 节点的前一个节点
         // 建议写在 for 循环里，语义清晰
-        for (int i = 0; i < left - 1; i++) {
+        for (int i = 1; i <= left - 1; i++) {
             pre = pre.next;
         }
 
         // 第 2 步：从 pre 再走 right - left + 1 步，来到 right 节点
         ListNode rightNode = pre;
-        for (int i = 0; i < right - left + 1; i++) {
+        for (int i = 1; i <= right - left + 1; i++) {
             rightNode = rightNode.next;
         }
 
@@ -40,6 +40,7 @@ public class LC92 {
         // 第 5 步：接回到原来的链表中
         pre.next = rightNode;
         leftNode.next = curr;
+
         return dummyNode.next;
     }
 
