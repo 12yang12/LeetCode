@@ -3,13 +3,14 @@ package stack;
 import java.util.*;
 
 
-public class LeetCode20 {
+public class LC20 {
 
     public boolean isValid(String s) {
         if (s.length() % 2 == 1) {
             return false;
         }
-        Map<Character, Character> map = new HashMap<>(8);
+
+        Map<Character, Character> map = new HashMap<>(4);
         map.put('(',')');
         map.put('[', ']');
         map.put('{', '}');
@@ -26,10 +27,11 @@ public class LeetCode20 {
                 }
             }
         }
+
         return stack.isEmpty();
     }
 
     public static void main(String[] args) {
-        System.out.println(new LeetCode20().isValid("{}"));
+        System.out.println(new LC20().isValid("{}"));
     }
 }
