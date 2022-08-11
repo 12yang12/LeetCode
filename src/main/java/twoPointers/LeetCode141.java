@@ -19,25 +19,17 @@ public class LeetCode141 {
         }
         return false;
     }
-}
 
-class ListNode {
-    int val;
-    ListNode next;
+    /**
+     * Definition for singly-linked list.
+     */
+    static class ListNode {
+        int val;
+        ListNode next;
 
-    ListNode(int x) {
-        val = x;
-        next = null;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
     }
 }
-/**
- * Definition for singly-linked list.
- * class ListNode {
- * int val;
- * ListNode next;
- * ListNode(int x) {
- * val = x;
- * next = null;
- * }
- * }
- */
