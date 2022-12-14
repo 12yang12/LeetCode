@@ -7,14 +7,15 @@ package linkedList;
 public class LC206 {
 
     public ListNode reverseList(ListNode head) {
-        ListNode prev = null, next;
+        ListNode prev = null;
         ListNode current = head;
+        ListNode temp = null;
 
         while (current != null) {
-            next = current.next;
+            temp = current.next;
             current.next = prev;
             prev = current;
-            current = next;
+            current = temp;
         }
 
         return prev;
