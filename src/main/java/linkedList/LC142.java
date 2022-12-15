@@ -7,26 +7,23 @@ package linkedList;
 public class LC142 {
 
     public ListNode detectCycle(ListNode head) {
-        if (head == null) {
-            return null;
-        }
+        ListNode slow = head;
+        ListNode fast = head;
 
-        ListNode slow = head, fast = head;
-        while (fast != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
-            if (fast.next != null) {
-                fast = fast.next.next;
-            } else {
-                return null;
-            }
+            fast = fast.next.next;
 
-            if (slow == fast) {
-                ListNode res = head;
-                while (res != slow) {
-                    res = res.next;
-                    slow = slow.next;
+            // 快慢指针相遇，此时从head 和 相遇点，同时查找直至相遇
+            if (fast == slow) {
+                ListNode node1 = head;
+                ListNode node2 = fast;
+
+                while (node1 != node2) {
+                    node1 = node1.next;
+                    node2 = node2.next;
                 }
-                return res;
+                return node1;
             }
         }
 
