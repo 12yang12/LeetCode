@@ -11,14 +11,18 @@ public class LC454 {
 
         for (int i : nums1) {
             for (int j : nums2) {
-                int v = map1.getOrDefault(i + j, 0);
-                map1.put(i + j, ++v);
+                if (map1.containsKey(i + j)) {
+                    map1.put(i + j, 1 + map1.get(i + j));
+                } else {
+                    map1.put(i + j, 1);
+                }
             }
         }
 
+        int diff;
         for (int i : nums3) {
             for (int j : nums4) {
-                int diff = -(i + j);
+                diff = -(i + j);
                 if (map1.containsKey(diff)) {
                     count += map1.get(diff);
                 }
