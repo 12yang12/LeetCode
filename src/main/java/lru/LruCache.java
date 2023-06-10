@@ -3,10 +3,10 @@ package lru;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LRUCache<K, V> extends LinkedHashMap<K, V> {
+public class LruCache<K, V> extends LinkedHashMap<K, V> {
     private int capacity;
 
-    public LRUCache(int capacity) {
+    public LruCache(int capacity) {
         super(capacity, 0.75f, true);
         this.capacity = capacity;
     }
